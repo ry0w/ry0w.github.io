@@ -7,6 +7,7 @@
 
 $('.loadimg').attr('src', '/images/loading.gif?' + new Date());
 
+
  jQuery(document).ready(function($) {
 
    setTimeout(function() {
