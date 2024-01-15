@@ -56,7 +56,7 @@
 				left: 0,
 				margin: 'auto auto 15vh auto',
 				background: '#232323',
-				color: 'dodgerblue',
+				color: 'cyan',
 				opacity: 0,
 				zIndex: 2,
 				borderRadius: '10px',
@@ -78,7 +78,7 @@
 				textAlign: 'center',
 				margin: 'auto',
 				cursor: 'pointer',
-				color: 'dodgerblue',
+				color: 'cyan',
 				userSelect: 'none',
 			}
 		};
@@ -94,7 +94,7 @@
 		for(let i = 0; i < this.sections.length; i++) {
 			this.child += '<tr>\
 			<th style="font-size: 14px; padding: 10px; border: 1px solid #ddd; background: black; display: block; color: white;">' + String(this.sections[i][0]) + '</th>\
-			<td style="font-size: 14px; text-align: center; color: dodgerblue; padding: 10px; border: 1px solid #ddd; background: #0e0e0e; display: block;">' + String(this.sections[i][1]) + '</td>\
+			<td style="font-size: 14px; text-align: center; color: cyan; padding: 10px; border: 1px solid #ddd; background: #0e0e0e; display: block;">' + String(this.sections[i][1]) + '</td>\
 			</tr>';
 		}
 		this.child += '</table>';
@@ -112,6 +112,8 @@
 	}
 
 	Modal.prototype.fadeIn = function(target) {
+        
+            root.scrollY = 0;
 		if(!this.isFading) {
 			this.isFading = true;
 			var fadeIn = () => {
@@ -184,6 +186,10 @@
 					clearTimeout(this.tid2);
 					this.isScrolling = false;
 				}
+                setTimeout(() => {
+                    clearTimeout(this.tid2);
+                    root.scrollTo(0, this.pageYOffset);
+                }, 300);
 			}
 			scroll();
 		} else {
@@ -252,33 +258,35 @@
 
 	modal_show_1.addEventListener('click', function() {
 		new Modal(this.innerHTML, cover_flow, [ 
-			['<i class="fa fa-user"></i> 氏名', '吉岡 稜平 / RYOHEI YOSHIOKA'],
-			['<i class="fa fa-star"></i> 趣味・特技', 'スケボー・VIPカスタム・車全般・筋トレ・ウィンタースポーツなど'],
-			['<i class="fa fa-birthday-cake"></i> 年齢', '22歳'],
-			['<i class="fa fa-home"></i> 出身', '奈良県 橿原市 <i class="fa fa-map-marker"></i>']
+			['<i class="fa fa-user"></i> whoami', 'RYOHEI YOSHIOKA'],
+			['<i class="fa fa-star"></i> likes', '<i class="fa fa-car"></i> BaggedCar Life(LEXUS IS OWNER) / <a href="https://instagram.com/keiju__official">@keiju__official</a>'],
+			['<i class="fa fa-birthday-cake"></i> Age', '22 y/o'],
+			['<i class="fa fa-home"></i> From', 'Kashihara-City, nara, Japan <i class="fa fa-map-marker"></i>']
 		]);
 		this.blur();
 	});
 
 	modal_show_2.addEventListener('click', function() {
-		new Modal(this.innerHTML + '<p class="lang">習得中のスキル</p>', cover_flow, [
-			['<span class="lang">html / css</span>', new Meter('#323232', 'dodgerblue', '50%').element],
-			['<span class="lang">JavaScript (JS-Native)</span>', new Meter('#323232', 'dodgerblue', '60%').element],
-			['<span class="lang">PHP</span>', new Meter('#323232', 'dodgerblue', '25%').element],
-			['<span class="lang">MogoDB</span>', new Meter('#323232', 'dodgerblue', '5%').element],
-			['<span class="lang">Express</span>', new Meter('#323232', 'dodgerblue', '5%').element],
-			['<span class="lang">React</span>', new Meter('#323232', 'dodgerblue', '10%').element],
-			['<span class="lang">Node.js</span>', new Meter('#323232', 'dodgerblue', '25%').element],
-			['<span class="lang">Ubuntu</span>', new Meter('#323232', 'dodgerblue', '40%').element],
-			['<span class="lang">C</span>', new Meter('#323232', 'dodgerblue', '10%').element],
+		new Modal(this.innerHTML + '<p class="lang">できるスキルとか</p>', cover_flow, [
+			['<span class="lang">html / css</span>', new Meter('#323232', 'cyan', '100%').element],
+			['<span class="lang">JavaScript (VanillaJS)</span>', new Meter('#323232', 'cyan', '80%').element],
+			['<span class="lang">PHP</span>', new Meter('#323232', 'cyan', '50%').element],
+			['<span class="lang">MySQL</span>', new Meter('#323232', 'cyan', '25%').element],
+			['<span class="lang">MogoDB</span>', new Meter('#323232', 'cyan', '20%').element],
+			['<span class="lang">Express</span>', new Meter('#323232', 'cyan', '20%').element],
+			['<span class="lang">React</span>', new Meter('#323232', 'cyan', '50%').element],
+			['<span class="lang">Node.js</span>', new Meter('#323232', 'cyan', '40%').element],
+			['<span class="lang">Ubuntu</span>', new Meter('#323232', 'cyan', '40%').element],
+			['<span class="lang">C</span>', new Meter('#323232', 'cyan', '15%').element],
+			['<span class="lang">Anonymize, BlackHat<i class="fa fa-user"></i></span>', new Meter('#323232', 'cyan', '65%').element]
 		]);
 		this.blur();
 	});
 
 	modal_show_3.addEventListener('click', function() {
-		new Modal(this.innerHTML + '<br><small>※画像クリックで飛べます</small>', cover_flow, [
-			['<i class="fa fa-gamepad"></i> 文化祭のゲーム出展/管理システム(SPA)', '<a href="https://ryow.jp/grid"><img width="100%" src="./images/project-doc/grid.png"></a><p>学校の文化祭にてプログラミング技術部に依頼されてゲームを一元で出展&管理する設計で依頼を受けてWebアプリを開発しました。左下にアラートを出す機能を作るのが難しかったです。</p>'],
-			['<i class="fa fa-id-card-o"></i> ポートフォリオ(SPA)', '<a href="https://ryow.jp/"><img width="100%" src="./images/project-doc/pf.png"></a><p>此方は、非同期ローディングの練習を兼ねてSPAで作成してみました。</p>']
+		new Modal(this.innerHTML + '<br><small>過去の開発経験</small>', cover_flow, [
+			['<i class="fa fa-gamepad"></i> みずほ銀行NISAランディングページ開発', '<img width="100%" src="./images/project-doc/mizuhoLP.png"></a><p>みずほ銀行さんのカフェNISAのトップページの開発を行いました！</p>'],
+			['<i class="fa fa-id-card-o"></i> 事業ページ作成', '<a href="https://k-townlife.com"><img width="100%" src="./images/project-doc/ktown.png"></a><p>Reactを使って事業用のページを開発しています！(途中)</p>']
 		]);
 		this.blur();
 	});
@@ -290,7 +298,6 @@
 			['<p><img width="100%" src="./images/07.jpeg"></p>', '松茸が取れる伝説の山(実話)'],
 			['<p><img width="100%" src="./images/08.jpeg"></p>', '鳥羽水族館その１'],
 			['<p><img width="100%" src="./images/09.jpeg"></p>', '鳥羽水族館その２'],
-			['<p><img width="100%" src="./images/10.jpeg"></p>', 'お世話になった先輩と僕'],
 			['<p><img width="100%" src="./images/11.jpeg"></p>', '地元から見える夕焼け'],
 			['<p><img width="100%" src="./images/12.jpeg"></p>', '虹と紅葉(京都)'],
 		]);

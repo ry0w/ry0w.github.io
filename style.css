@@ -72,7 +72,7 @@ body {
 	z-index: 3;
 	background-color: violet;
 	animation-fill-mode: both;
-	border: 2px solid dodgerblue;
+	border: 2px solid cyan;
 	border-bottom-color: transparent;
 	height: 80px;
 	width: 80px;
@@ -132,11 +132,11 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 100%;
-	box-shadow: 0 0 0 7px dodgerblue;
+	box-shadow: 0 0 0 7px cyan;
 }
 
 .tl_text {
-	color: dodgerblue;
+	color: cyan;
 	padding: 5px;
 	font-size: x-large;
 	display: inline-block;
@@ -146,7 +146,7 @@ body {
 }
 
 .tl_sub_text {
-    color: dodgerblue;
+    color: cyan;
     padding: 5px;
     font-size: x-small;
     font-weight: bold;
@@ -156,7 +156,7 @@ body {
 }
 
 .cntt {
-	color: dodgerblue;
+	color: cyan;
 	font-size: 14px;
 	margin: 50px auto;
 }
@@ -169,8 +169,8 @@ body {
 .copyright {
 	margin: 10px auto;
 	font-size: 14px;
-	color: dodgerblue;
-	border: solid 1px dodgerblue;
+	color: cyan;
+	border: solid 1px cyan;
 	background: #0e0e0e;
 	border-radius: 5px;
 	padding: 5px;
