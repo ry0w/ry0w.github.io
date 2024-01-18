@@ -56,7 +56,7 @@
 				left: 0,
 				margin: 'auto auto 15vh auto',
 				background: '#232323',
-				color: 'cyan',
+				color: 'dodgerblue',
 				opacity: 0,
 				zIndex: 2,
 				borderRadius: '10px',
@@ -78,7 +78,7 @@
 				textAlign: 'center',
 				margin: 'auto',
 				cursor: 'pointer',
-				color: 'cyan',
+				color: 'dodgerblue',
 				userSelect: 'none',
 			}
 		};
@@ -94,7 +94,7 @@
 		for(let i = 0; i < this.sections.length; i++) {
 			this.child += '<tr>\
 			<th style="font-size: 14px; padding: 10px; border: 1px solid #ddd; background: black; display: block; color: white;">' + String(this.sections[i][0]) + '</th>\
-			<td style="font-size: 14px; text-align: center; color: cyan; padding: 10px; border: 1px solid #ddd; background: #0e0e0e; display: block;">' + String(this.sections[i][1]) + '</td>\
+			<td style="font-size: 14px; text-align: center; color: dodgerblue; padding: 10px; border: 1px solid #ddd; background: #0e0e0e; display: block;">' + String(this.sections[i][1]) + '</td>\
 			</tr>';
 		}
 		this.child += '</table>';
@@ -268,17 +268,17 @@
 
 	modal_show_2.addEventListener('click', function() {
 		new Modal(this.innerHTML + '<p class="lang">できるスキルとか</p>', cover_flow, [
-			['<span class="lang">html / css</span>', new Meter('#323232', 'cyan', '100%').element],
-			['<span class="lang">JavaScript (VanillaJS)</span>', new Meter('#323232', 'cyan', '80%').element],
-			['<span class="lang">PHP</span>', new Meter('#323232', 'cyan', '50%').element],
-			['<span class="lang">MySQL</span>', new Meter('#323232', 'cyan', '25%').element],
-			['<span class="lang">MogoDB</span>', new Meter('#323232', 'cyan', '20%').element],
-			['<span class="lang">Express</span>', new Meter('#323232', 'cyan', '20%').element],
-			['<span class="lang">React</span>', new Meter('#323232', 'cyan', '50%').element],
-			['<span class="lang">Node.js</span>', new Meter('#323232', 'cyan', '40%').element],
-			['<span class="lang">Ubuntu</span>', new Meter('#323232', 'cyan', '40%').element],
-			['<span class="lang">C</span>', new Meter('#323232', 'cyan', '15%').element],
-			['<span class="lang">Anonymize, BlackHat<i class="fa fa-user"></i></span>', new Meter('#323232', 'cyan', '65%').element]
+			['<span class="lang">html / css</span>', new Meter('#323232', 'dodgerblue', '100%').element],
+			['<span class="lang">JavaScript (VanillaJS)</span>', new Meter('#323232', 'dodgerblue', '80%').element],
+			['<span class="lang">PHP</span>', new Meter('#323232', 'dodgerblue', '50%').element],
+			['<span class="lang">MySQL</span>', new Meter('#323232', 'dodgerblue', '25%').element],
+			['<span class="lang">MogoDB</span>', new Meter('#323232', 'dodgerblue', '20%').element],
+			['<span class="lang">Express</span>', new Meter('#323232', 'dodgerblue', '20%').element],
+			['<span class="lang">React</span>', new Meter('#323232', 'dodgerblue', '50%').element],
+			['<span class="lang">Node.js</span>', new Meter('#323232', 'dodgerblue', '40%').element],
+			['<span class="lang">Ubuntu</span>', new Meter('#323232', 'dodgerblue', '40%').element],
+			['<span class="lang">C</span>', new Meter('#323232', 'dodgerblue', '15%').element],
+			['<span class="lang">Anonymize, BlackHat<i class="fa fa-user"></i></span>', new Meter('#323232', 'dodgerblue', '65%').element]
 		]);
 		this.blur();
 	});
