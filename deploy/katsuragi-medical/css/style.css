@@ -10,7 +10,6 @@ body {
 	-webkit-text-size-adjust: none;
 }
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,select,input,textarea {margin: 0px;padding: 0px;font-size: 100%;}
-ul {list-style-type: none;}
 img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
 table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
 iframe {width: 100%;}
@@ -73,6 +72,25 @@ header address .tel {
 	font-size: 250%;	/*文字サイズ*/
 	background: url(../images/icon_tel.png) no-repeat left center / 26px;	/*電話アイコンの読み込み。左(left)に、上下中央(center)に配置。画像幅26px。*/
 	padding-left: 35px;	/*電話アイコン部分の余白をここで作る*/
+}
+
+#menubar-s ul {
+	list-style-type: none;
+}	
+#menubar ul {
+	list-style-type: none;
+}
+
+.ppsect ul {
+	padding-left: 50px;
+}
+
+#fsize ul {
+	list-style-type: none;
+}
+
+.submenu {
+	list-style: none;
 }
 
 /*文字サイズ変更ボタン（※文字サイズを「大」にした時の設定はchange.cssで行う）
@@ -278,6 +296,16 @@ body.is-fixed #menubar li:last-child a {
 /*mainコンテンツの段落タグ設定*/
 #main p {
 	padding: 0px 20px 20px;	/*上、左右、下への余白*/
+}
+
+.ppsect p {
+	padding: 20px 20px 0px 0px !important;
+	font-size: large;
+	font-weight: bold;
+}
+.ppsect .orig {
+	font-weight: normal;
+	font-size:medium;
 }
 /*他。微調整。*/
 #main p + p {
