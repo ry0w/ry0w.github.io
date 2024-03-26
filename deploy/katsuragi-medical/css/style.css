@@ -46,7 +46,10 @@ header {
 	position: relative;
 	margin: 0 auto;
 	height: 170px;	
-
+	background-image: url(../images/IMG_8962.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 header #logo {
@@ -852,14 +855,16 @@ body.is-fixed #menubar {
 	padding: 0 3%;	
 }
 
-
-
-
 header {
 	position: static;
 	height: auto;
-	background: none;
+	background-image: url(../images/IMG_8962.png);
+	background-position: center;
 	padding: 10px 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color:rgba(255,255,255,0.8);
+	background-blend-mode:lighten;
 	text-align: left;
 }
 
