@@ -253,10 +253,10 @@
 
 	const roles = [
 		"ハッカー(セキュリティ研究者)",
+		"HIPHOP大好きヘッズ",
 		"Webプログラマー(サイト/アプリ制作)",
 		"フリーランス(パソコン、ネットの何でも屋)",
-		"Webマーケター(ネット広告作成)",
-		"HIPHOP大好きヘッズ"
+		"Webマーケター(ネット広告作成)"
 	];
 	  
 	const roleElement = document.getElementById("role");
