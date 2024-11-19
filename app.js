@@ -300,7 +300,7 @@
 			['<i class="fa fa-birthday-cake"></i> Age', '23 y/o'],
 			['<i class="fa fa-home"></i> From', 'Kashihara-City, nara, Japan <i class="fa fa-map-marker"></i>'],
 			['<i class="fa fa-instagram"></i> 普通のお仕事依頼', '<a href="https://instagram.com/ryo2is">いんすた</a>'],
-			['<i class="fa fa-user-secret"></i> 秘密の連絡はこちら', '<a href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F1OwYGt-yqOfe2IyVHhxz3ohqo3aCCMjtB-8wn4X_aoY%3D%40smp11.simplex.im%2Fk4prkf-hIQUA_vblLTY6twHi0tPtiBNE%23%2F%3Fv%3D1-3%26dh%3DMCowBQYDK2VuAyEAUgUeg-6GtJBa6w_jrfrVB5s2RXM6YSlXi1X5Qrc0lgU%253D%26srv%3D6ioorbm6i3yxmuoezrhjk6f6qgkc4syabh7m3so74xunb5nzr4pwgfqd.onion">&#x1f977;</a>']
+			['<i class="fa fa-user-secret"></i> 秘密の連絡、仕事依頼はこちら', '<a href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F1OwYGt-yqOfe2IyVHhxz3ohqo3aCCMjtB-8wn4X_aoY%3D%40smp11.simplex.im%2Fk4prkf-hIQUA_vblLTY6twHi0tPtiBNE%23%2F%3Fv%3D1-3%26dh%3DMCowBQYDK2VuAyEAUgUeg-6GtJBa6w_jrfrVB5s2RXM6YSlXi1X5Qrc0lgU%253D%26srv%3D6ioorbm6i3yxmuoezrhjk6f6qgkc4syabh7m3so74xunb5nzr4pwgfqd.onion">&#x1f977;</a>']
 		]);
 		this.blur();
 	});
