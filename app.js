@@ -256,6 +256,7 @@
 		"Webプログラマー(サイト/アプリ制作)",
 		"フリーランス(パソコン、ネットの何でも屋)",
 		"Webマーケター(ネット広告作成)",
+		"HIPHOP大好きヘッズ"
 	];
 	  
 	const roleElement = document.getElementById("role");
