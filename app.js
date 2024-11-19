@@ -325,7 +325,7 @@
 		new Modal(this.innerHTML + '<br><small>過去の開発経験</small>', cover_flow, [
 			['<i class="fa fa-desktop"></i> 遠隔操作ウイルスの作成(研究)', '<img width="100%" src="./images/project-doc/botnetvirus.png"></a><p>既存のBotnetウイルスをリバースエンジニアリングし、オリジナルのBotnetを勉強目的で作成しました！</p>'],
 			['<i class="fa fa-university"></i> みずほ銀行NISAランディングページ開発', '<img width="100%" src="./images/project-doc/mizuhoLP.png"></a><p>みずほ銀行さんのカフェNISAのトップページの開発を行いました！</p>'],
-			['<i class="fa fa-hospital-o"></i> 葛城メディカルセンター様ウェブサイト制作', '<a href="https://katsuragi-medical.com"><img width="100%" src="./images/project-doc/medicalsama.png"></a><p>県内の病院関係者様のウェブサイトを作成しました！</p>']
+			['<i class="fa fa-hospital-o"></i> 病院関係ウェブサイト制作', '<a href="https://katsuragi-medical.com"><img width="100%" src="./images/project-doc/medicalsama.png"></a><p>県内の病院関係者様のウェブサイトを作成しました！</p>']
 		]);
 		this.blur();
 	});
