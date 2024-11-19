@@ -322,7 +322,7 @@
 	modal_show_3.addEventListener('click', function() {
 		new Modal(this.innerHTML + '<br><small>過去の開発経験</small>', cover_flow, [
 			['<i class="fa fa-gamepad"></i> みずほ銀行NISAランディングページ開発', '<img width="100%" src="./images/project-doc/mizuhoLP.png"></a><p>みずほ銀行さんのカフェNISAのトップページの開発を行いました！</p>'],
-			['<i class="fa fa-id-card-o"></i> 葛城メディカルセンター様ウェブサイト制作', '<a href="https://katsuragi-medical.com"><img width="100%" src="./images/project-doc/medicalsama.jpg"></a><p>県内の病院関係者様のウェブサイトを作成しました！</p>']
+			['<i class="fa fa-id-card-o"></i> 葛城メディカルセンター様ウェブサイト制作', '<a href="https://katsuragi-medical.com"><img width="100%" src="./images/project-doc/medicalsama.png"></a><p>県内の病院関係者様のウェブサイトを作成しました！</p>']
 		]);
 		this.blur();
 	});
