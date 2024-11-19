@@ -253,9 +253,9 @@
 
 	const roles = [
 		"ハッカー(セキュリティ研究者)",
-		"Webプログラマー",
-		"フリーランスエンジニア",
-		"Webマーケター",
+		"Webプログラマー(Webサイト/アプリ)制作",
+		"フリーランスエンジニア(パソコン、ネットの何でも屋)",
+		"Webマーケター(ネット広告作成)",
 	];
 	  
 	const roleElement = document.getElementById("role");
