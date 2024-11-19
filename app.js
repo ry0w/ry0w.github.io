@@ -50,6 +50,8 @@
 				border: 'solid 1px #ddd',
 				width: '650px',
 				maxWidth: '75%',
+				maxHeight: "65%",
+				overflowY: "auto",
 				position: 'absolute',
 				top: '15%',
 				right: 0,
