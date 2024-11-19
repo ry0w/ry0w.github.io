@@ -87,7 +87,6 @@ body {
   100% {transform: rotate(360deg) scale(1); } 
 }
 
-
 @keyframes rot {
 	0% {transform: rotate(0deg);}
 	100% {tranform: rotate(360deg);}
@@ -148,11 +147,34 @@ body {
 .tl_sub_text {
     color: dodgerblue;
     padding: 5px;
-    font-size: x-small;
+    font-size: 1.2em;
     font-weight: bold;
     display: block;
     margin: 0px auto;
     letter-spacing: 5px;
+}
+
+#role {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.cursor {
+	margin-bottom: .6em;
+	display: inline-block;
+	width: 8px;
+	height: 16px;
+	background-color: lime;
+	vertical-align: middle;
+	margin-left: 2px;
+	animation: blink 0.6s steps(2, start) infinite;
+}
+
+@keyframes blink {
+	50% {
+	  opacity: 0;
+	}
 }
 
 .cntt {

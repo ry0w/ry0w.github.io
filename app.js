@@ -249,19 +249,55 @@
 
 	/* ========== end define classes. ========== */
 
+	const roles = [
+		"ハッカー(セキュリティ研究者)",
+		"Webプログラマー",
+		"フリーランスエンジニア",
+		"Webマーケター",
+	];
+	  
+	const roleElement = document.getElementById("role");
+	let roleIndex = 0;
+	let charIndex = 0;
+	let isDeleting = false;
+	const typingSpeed = 100;
+	const pauseDuration = 2000;
+	
+	function typeEffect() {
+		const currentRole = roles[roleIndex];
+		roleElement.textContent = currentRole.substring(0, charIndex);
+	  
+		if (isDeleting) {
+		  charIndex--;
+		  if (charIndex < 0) {
+			isDeleting = false;
+			roleIndex = (roleIndex + 1) % roles.length;
+		  }
+		} else {
+		  charIndex++;
+		  if (charIndex > currentRole.length) {
+			isDeleting = true;
+			setTimeout(typeEffect, pauseDuration);
+			return;
+		  }
+		}
+	  
+		setTimeout(typeEffect, isDeleting ? typingSpeed / 2 : typingSpeed);
+	}
+
 	let cover_flow = document.getElementById('cover_flow');
 
 	let modal_show_1 = document.getElementById('modal-about');
 	let modal_show_2 = document.getElementById('modal-skills');
 	let modal_show_3 = document.getElementById('modal-experience');
-	let modal_show_4 = document.getElementById('modal-gallery');
 
 	modal_show_1.addEventListener('click', function() {
 		new Modal(this.innerHTML, cover_flow, [ 
 			['<i class="fa fa-user"></i> whoami', 'RYOHEI YOSHIOKA'],
-			['<i class="fa fa-star"></i> likes', '<i class="fa fa-car"></i> BaggedCar Life(LEXUS IS OWNER) / <a href="https://instagram.com/keiju__official">@keiju__official</a>'],
-			['<i class="fa fa-birthday-cake"></i> Age', '22 y/o'],
-			['<i class="fa fa-home"></i> From', 'Kashihara-City, nara, Japan <i class="fa fa-map-marker"></i>']
+			['<i class="fa fa-birthday-cake"></i> Age', '23 y/o'],
+			['<i class="fa fa-home"></i> From', 'Kashihara-City, nara, Japan <i class="fa fa-map-marker"></i>'],
+			['<i class="fa fa-instagram"></i> 普通のお仕事依頼', '<a href="https://instagram.com/ryo2is">いんすた</a>'],
+			['<i class="fa fa-user-secret"></i> 秘密の連絡はこちら', '<a href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F1OwYGt-yqOfe2IyVHhxz3ohqo3aCCMjtB-8wn4X_aoY%3D%40smp11.simplex.im%2Fk4prkf-hIQUA_vblLTY6twHi0tPtiBNE%23%2F%3Fv%3D1-3%26dh%3DMCowBQYDK2VuAyEAUgUeg-6GtJBa6w_jrfrVB5s2RXM6YSlXi1X5Qrc0lgU%253D%26srv%3D6ioorbm6i3yxmuoezrhjk6f6qgkc4syabh7m3so74xunb5nzr4pwgfqd.onion">&#x1f977;</a>']
 		]);
 		this.blur();
 	});
@@ -286,20 +322,7 @@
 	modal_show_3.addEventListener('click', function() {
 		new Modal(this.innerHTML + '<br><small>過去の開発経験</small>', cover_flow, [
 			['<i class="fa fa-gamepad"></i> みずほ銀行NISAランディングページ開発', '<img width="100%" src="./images/project-doc/mizuhoLP.png"></a><p>みずほ銀行さんのカフェNISAのトップページの開発を行いました！</p>'],
-			['<i class="fa fa-id-card-o"></i> 事業ページ作成', '<a href="https://k-townlife.com"><img width="100%" src="./images/project-doc/ktown.png"></a><p>Reactを使って事業用のページを開発しています！(途中)</p>']
-		]);
-		this.blur();
-	});
-
-	modal_show_4.addEventListener('click', function() {
-		new Modal(this.innerHTML, cover_flow, [
-			['<p><img width="100%" src="./images/01.jpeg"></p>', '飼い犬の「コタロー」'],
-			['<p><img width="100%" src="./images/06.jpeg"></p>', '肉寿司'],
-			['<p><img width="100%" src="./images/07.jpeg"></p>', '松茸が取れる伝説の山(実話)'],
-			['<p><img width="100%" src="./images/08.jpeg"></p>', '鳥羽水族館その１'],
-			['<p><img width="100%" src="./images/09.jpeg"></p>', '鳥羽水族館その２'],
-			['<p><img width="100%" src="./images/11.jpeg"></p>', '地元から見える夕焼け'],
-			['<p><img width="100%" src="./images/12.jpeg"></p>', '虹と紅葉(京都)'],
+			['<i class="fa fa-id-card-o"></i> 葛城メディカルセンター様ウェブサイト制作', '<a href="https://katsuragi-medical.com"><img width="100%" src="./images/project-doc/medicalsama.jpg"></a><p>県内の病院関係者様のウェブサイトを作成しました！</p>']
 		]);
 		this.blur();
 	});
@@ -307,6 +330,7 @@
 	root.addEventListener('load', e => {
 		setTimeout(() => {
 			document.body.removeChild(document.getElementById('load_wrapper'));
+			typeEffect();
 		}, Math.floor(Math.random() * (1500 - 800) + 800));
 	});
 
