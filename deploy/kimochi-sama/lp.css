@@ -293,7 +293,7 @@ body {
     min-width: 0;
   }
   .intro > ol > li {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   #header > .header_inner {
@@ -1437,8 +1437,8 @@ body {
   }
 
   .contact {
-    width: 100%;
-    padding: 0;
+    max-width: 90%;
+    padding: 10px !important;
     margin: 15px auto 20px;
     border: none;
   }
