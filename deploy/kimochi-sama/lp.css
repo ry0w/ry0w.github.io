@@ -286,8 +286,14 @@ body {
   #wrap {
     min-width: 0;
   }
+  img {
+      max-width: 100%;
+  }
   #header {
     min-width: 0;
+  }
+  .intro > ol > li {
+    max-width: 100%;
   }
 
   #header > .header_inner {
@@ -1260,6 +1266,9 @@ body {
 
 /* レスポンシブ */
 @media screen and (max-width: 767px) {
+  .contact > .contact_btn {
+      max-width: 95%;
+  }
   .mainimg_202006 {
     min-width: 0;
     height: auto;
