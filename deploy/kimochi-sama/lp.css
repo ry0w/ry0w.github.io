@@ -332,6 +332,7 @@ body {
   #header.header_fixed + #main {
     padding-top: 55px;
     background: #538f53;
+    padding-bottom: 100px;
   }
 
   #main {
@@ -410,6 +411,7 @@ body {
   border-radius: 4px;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
+
 .mainimg > div > div > .mainimg_btn > a:before {
   content: "";
   width: 33px;
@@ -584,6 +586,9 @@ body {
   color: #fff;
 }
 .mainimg_202006 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
   min-width: 980px;
   height: 460px;
@@ -598,7 +603,6 @@ body {
   -ms-flex-pack: justify;
   justify-content: center;
   width: 980px;
-  padding-top: 380px;
   margin: 0 auto;
 }
 .mainimg_202006 > div > .catch {
@@ -1043,6 +1047,7 @@ body {
 .point2 > .point__wrapper > .point_cnt > div,
 .point3 > .point__wrapper > .point_cnt > div,
 .point4 > .point__wrapper > .point_cnt > div {
+  text-align: center;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -1264,13 +1269,40 @@ body {
     max-height: 80px;
 }
 
+.point_list {
+    text-align: left;
+    padding: 1em;
+    display: inline-block;
+    margin: auto;
+}
+
+.point_list li {
+    list-style: inside;
+}
+
+.mainimg_202006 h1 {
+    text-align: center;
+    color: white;
+    font-family: "Noto Sans JP", serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 10px;
+    background: rgba(34, 229, 116, .3)
+}
+
 /* レスポンシブ */
 @media screen and (max-width: 767px) {
   .contact > .contact_btn {
       max-width: 95%;
   }
-  .mainimg_202006 {
-    min-width: 0;
+
+  .contact > .contact_btn > a {
+    font-size: 22px !important;
+  }
+    .mainimg_202006 {
+    justify-content: space-around;
+    min-width: 0 !important;
     height: auto;
     background: none;
     background-color: #e5222c;
@@ -1437,7 +1469,7 @@ body {
   }
 
   .contact {
-    max-width: 90%;
+    max-width: 95%;
     padding: 10px !important;
     margin: 15px auto 20px;
     border: none;

@@ -52,6 +52,8 @@
 
       <div id="main">
         <section class="mainimg_202006">
+            <div></div>
+            <h1>株式会社　希望(キモチ)</h1>
           <div>
             <div class="catch">
               <div class="mainimg_catch">
@@ -77,7 +79,7 @@
             <li>
               <a href="#point1">
                 <p class="intro_point_num">ポイント<span>1</span></p>
-                <h3 class="intro_point_title">未経験からの<br class="pcOnly">転職！</h3>
+                <h3 class="intro_point_title">未経験からの<br class="spOnly"><br class="pcOnly">転職！</h3>
                 <p class="intro_point_text">未経験からでも<br class="spOnly"><br class="pcOnly">キャリアチェンジを<br class="pcOnly">目指す！</p>
               </a>
             </li>
@@ -91,7 +93,7 @@
             <li>
               <a href="#point3">
                 <p class="intro_point_num">ポイント<span>3</span></p>
-                <h3 class="intro_point_title">安心のサポート<br class="pcOnly">体制！！</h3>
+                <h3 class="intro_point_title">安心のサポート<br class="spOnly"><br class="pcOnly">体制！！</h3>
                 <p class="intro_point_text">採用に不慣れでも安心！<br>採用成功まで伴走します！</p>
               </a>
             </li>
@@ -205,7 +207,7 @@
             
             <div class="contact">
               <div class="contact_tel">
-                <h3>お電話でのお問合せはこちら</h3>
+                <h3 class="pcOnly">お電話でのお問合せはこちら</h3>
                 <p></p>
                 <dl>
                   <dt>受付時間</dt>
@@ -226,8 +228,15 @@
               <div class="point3_box1">
                 <div>
                   <p class="point_text">
-株式会社キモチでは、<br>多数人材の転職をサポート！
-                    <br><b>採用に不慣れでも安心！</b><br class="pcOnly"><b>"面接までお待ちいただくのみ"</b><br>の求人もございます！！<br class="pcOnly">充実のサポートで<br class="pcOnly"><b>貴方の採用成功まで伴走</b>します！
+                     <b>採用に不慣れでも安心！</b><br class="pcOnly">
+                      <br class="spOnly">
+                      <ul class="point_list">
+                          <li><b>履歴書職務経歴書の添削</b></li>
+                          <li><b>アドバイザーによる面接練習</b></li>
+                          <li><b>応募関連のお手続き</b></li>
+                      </ul>
+                    <p>など、全力サポートいたします！</p>
+                    <br class="pcOnly">充実のサポートで<br><b>貴方の採用成功まで伴走</b>します！
                   </p>
                 </div>
                 <figure>
@@ -318,87 +327,7 @@
       </footer>
     </article>
         <script>
-
             
-      document.addEventListener("DOMContentLoaded", () => {
-
-            document.addEventListener("DOMContentLoaded", () => {
-  // スライドショーのターゲットを取得
-  const ul = document.querySelector("ul");
-  if (!ul) {
-    console.error("スライドショー対象の <ul> が見つかりませんでした。");
-    return;
-  }
-
-  const liItems = Array.from(ul.children); // <li> 要素を配列化
-  if (liItems.length === 0) {
-    console.error("<ul> の中に <li> がありません。");
-    return;
-  }
-
-  // スタイルを設定
-  ul.style.listStyle = "none";
-  ul.style.margin = "0";
-  ul.style.padding = "0";
-  ul.style.overflow = "hidden";
-  ul.style.position = "relative";
-  ul.style.width = "100%";
-  ul.style.height = liItems[0].offsetHeight + "px"; // 最初の <li> の高さを設定
-
-  liItems.forEach((li, index) => {
-    li.style.position = "absolute";
-    li.style.top = "0";
-    li.style.left = "100%";
-    li.style.width = "100%";
-    li.style.transition = "left 0.5s ease";
-    if (index === 0) li.style.left = "0"; // 最初のアイテムを表示
-  });
-
-  // スライドショー制御
-  let currentIndex = 0;
-
-  const showNextSlide = () => {
-    const previousIndex = currentIndex;
-    currentIndex = (currentIndex + 1) % liItems.length;
-
-    liItems[previousIndex].style.left = "-100%"; // 左に消える
-    liItems[currentIndex].style.left = "0"; // 中央に表示
-  };
-
-  // 一定間隔でスライドを切り替え
-  setInterval(showNextSlide, 3000); // 3秒ごとにスライド切り替え
-});
-
-  // スタイルを追加
-  const style = document.createElement("style");
-  style.textContent = `
-    body > * {
-      opacity: 0; /* 最初は透明 */
-      transition: opacity 0.6s ease-out; /* フェードインアニメーション */
-    }
-
-    body > *.visible {
-      opacity: 1; /* 表示 */
-    }
-  `;
-  document.head.appendChild(style);
-
-  // フェードインを適用する関数
-  const handleScroll = () => {
-    const elements = Array.from(document.body.children);
-    elements.forEach((element) => {
-      const rect = element.getBoundingClientRect();
-      if (rect.top < window.innerHeight) {
-        element.classList.add("visible");
-      }
-    });
-  };
-
-  // 初期実行とスクロール時のイベント設定
-  handleScroll(); // ページロード時にチェック
-  window.addEventListener("scroll", handleScroll); // スクロール時にチェック
-});
-
 </script>
     <style>
         @charset "utf-8"; #main {
@@ -637,16 +566,7 @@
     margin: 0px auto;
     background: url("./img.webp") center center / cover no-repeat;
 }
-
-.mainimg_202006 > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 980px;
-    padding-top: 380px;
-    margin: 0px auto;
-}
-
+        
 .mainimg_202006 > div > .catch {
     display: none;
     width: 0px;
@@ -1094,13 +1014,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .mainimg_202006 {
-        min-width: 0px;
-        display: flex;
-        align-items: center;
-        justify-content: space-arround;
-    }
-        .contact_btn {
+  .contact_btn {
         margin: 1em auto !important;
             
     }
