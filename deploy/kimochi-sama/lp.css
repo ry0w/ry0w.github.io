@@ -203,7 +203,7 @@ body {
   width: 100%;
   min-width: 980px;
   margin: 0 auto;
-  background: #fff;
+  background: rgba(83, 143, 83, .7);
 }
 #header > .header_inner {
   display: -ms-flexbox;
@@ -214,7 +214,7 @@ body {
   height: 83px;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
+  background: rgba(83, 143, 83, .7);
 }
 #header > .header_inner > div > a {
   display: block;
@@ -237,6 +237,14 @@ body {
 }
 #header.header_fixed + #main {
   padding-top: 83px;
+}
+.header_title {
+    text-align: center;
+    color: white;
+    font-family: "Noto Sans JP", serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 1em;
 }
 #footer {
   box-sizing: border-box;
@@ -283,6 +291,9 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .header_title {
+      font-size: 1.2em;
+  }
   #wrap {
     min-width: 0;
   }
@@ -592,7 +603,7 @@ body {
   width: 100%;
   min-width: 980px;
   height: 460px;
-  margin: 0 auto;
+  margin: 30px auto;
   background: url("./img.webp") center center no-repeat;
 }
 .mainimg_202006 > div {
@@ -1281,10 +1292,13 @@ body {
 }
 
 .mainimg_202006 h1 {
+    width: fit-content;
+    margin: auto;
     text-align: center;
     color: white;
+    display: inline-block;
     font-family: "Noto Sans JP", serif;
-    font-size: 1.6em;
+    font-size: 2em;
     font-weight: bold;
     padding: 1em;
     border-radius: 10px;
