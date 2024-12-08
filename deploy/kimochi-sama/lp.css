@@ -194,6 +194,15 @@ body {
   color: #333;
   background: #fff;
 }
+ .scroll-element {
+     opacity: 0;
+     transform: translateY(50px);
+     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+ }
+.scroll-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 #wrap {
   width: 100%;
   min-width: 980px;
@@ -705,7 +714,7 @@ body {
     margin-bottom: 1.5em;
     text-align: center;
     border: 6px solid #fff;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #fff;
 }
 .intro > ol > li:hover {
@@ -733,6 +742,7 @@ body {
 }
 .intro > ol > li > a > .intro_point_num {
     display: flex;
+    border-bottom: solid 2px black;
     align-items: center;
     justify-content: center;
     padding: 0.05em 0px 0.25em;
