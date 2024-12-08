@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
 
     const TARGET = document.querySelectorAll('*');
-    
+
     Array.prototype.forEach.call(TARGET, ele => {
         if(ele.parentNode.id === 'main') {
             ele.classList.add('scroll-element');
@@ -12,9 +12,8 @@ window.addEventListener('load', () => {
          entries.forEach((entry) => {
              if (entry.isIntersecting) {
                  entry.target.classList.add('visible');
-             } else {
-                 entry.target.classList.remove('visible');
-             }
+                 observer.unobserve(entry.target);
+             } 
          });
      }, { threshold: 0.1 });
     document.querySelectorAll('.scroll-element').forEach((element) => {
