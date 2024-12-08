@@ -200,6 +200,13 @@ body {
      transform: translateY(50px);
      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
  }
+.mainimg_202006 {
+    width: 100%;
+    min-width: 980px;
+    height: 460px;
+    margin: 0px auto;
+    background: url("./img.webp") center center / cover no-repeat;
+}
 .scroll-element.visible {
     opacity: 1;
     transform: translateY(0);
@@ -300,6 +307,8 @@ body {
   display: none;
 }
 
+
+
 @media screen and (max-width: 767px) {
   .header_title {
       font-size: 1.2em;
@@ -392,6 +401,7 @@ body {
   margin: 0 auto;
   background: #f7a2b6;
 }
+
 .mainimg > div {
   display: -ms-flexbox;
   display: flex;
@@ -612,9 +622,9 @@ body {
   justify-content: space-around;
   width: 100%;
   min-width: 980px;
-  height: 460px;
-  margin: 30px auto;
-  background: url("./img.webp") center center no-repeat;
+  height: 500px;
+  margin: 0px auto;
+  background: url("./img.webp") top center / cover no-repeat;
 }
 .mainimg_202006 > div {
   display: -ms-flexbox;
@@ -799,6 +809,25 @@ body {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAABjCAYAAADtlJL/AAAACXBIWXMAAAsSAAALEgHS3X78AAADlUlEQVR4nM2bzW3bQBCFJ0IKcM46JOGZh6QCOxXYHSStqAO5AssVxO7AJTiAz5IuPEcdJKCxNNZP+zOznFnud7IlE3p5S34ccRGqzdD1v4au/yb92A8LBP3nfnwmonsieljvX46546oGHbr+hoh+B956IKJHF/oUOnZlH+8dl5HXx3/AHREdhq6/G7r+Cv+gdqMHIvrC/POja/p2PDWqBR26fgx4KDx8W3Ppb2Yc+1gzaOz8zHFc71+eqgQduv5iRqMbqnjVn13FTE7r/cuuZtDrwuNupx9ab3Q7/WAe1N3Xue702fl3qRqNlra58X+pEbTk/HzCQcU0qNNSSaMbfMG60ZKQr4LHF62Dliz7WZtkPT0NXf+XiC4Eh4yC/xR6w6xRpyVJSPIFj1gufcm9fRt7wzKo9Pzcxb6GkFVQpyXpN83gRTRh1ah02c8Ej1gFlQ7JyTapkUaDgkfUgxZoKdsmGTUqafNtgs9hEVSipajgEdWg7rs7V0unlOAR7UYl01L0OVMI7aCSZWddRBNLNcp61OijFtQ9geNqiX0RTWg2yl32Z47gEc2g3GUXt0laE77gkeJ4u/xa8hlajXLbvC/9AK2gnPNTJHhEKyjn/i4SPDI7qNvp4CASvHpQ5pAsFjyiEZTTaJGSfGbpiamlUfDf53wOKTRapU1SCJo7P4/cCT6HdaPFgkeKgzK0NEvwyJxGc8s+S/DInKC5RmcJHikKytjpmC14pLTR3LSkoiSf0qCpaalogs8hDsrY6VBvkwobTYVUEzxSEjS17GqCRzQbVRU8Igqa0ZKq4BFpo6nzU1XwiDToz8jr6oJH2EEzOx0mSvKRNBq7t5sIHpEEjU1L5m2S5DtTZAO2+BGNFFajiZ0OM8Ej3KUPnZ+mgke4QUO3TVPBI9mgCS2ZCh7hNBpadnPBI5ygIS1VUZJPSaNVBI8kg0Z2Oqq3SYxG8Wo3m+Bz5ILiWFdN8Eg0aGADtqrgkVSj2GZVwSOpoHh+VhU8wm20uuCRYNCAlhZRkk+sUX/ZFxE8EgvqL/vibVJowoedjmoTfI5Qo/69fTHBI6Gg07S0qOCRVKOLCh55FxR2OhYVPIKNTsu+uOARDDo12oSSfN705GlJZZNVG7/RZtskCHq55ASf4zWo91/NmhE8MjV61ZrgkSnodWuCRz6638dGf7QT65yVe6T43JrgkZVrs0kl+YxBP7cwwecYg/5pOyIREdF/KYELziMcpAQAAAAASUVORK5CYII=")
     center center no-repeat;
 }
+
+.contact > .contact_btn > a {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 60px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: rgb(34, 229, 116);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 0px;
+}
+
 .intro > ol > li > a > .intro_point_text {
   line-height: 1.40741;
   font-size: 27px;
@@ -871,26 +900,6 @@ body {
 .contact > .contact_btn {
   width: 378px;
   margin-left: 30px;
-}
-.contact > .contact_btn > a {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 110px;
-  font-size: 28px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #000;
-  background: #ffd722;
-  border-radius: 4px;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
 }
 .contact > .contact_btn > a:before {
   content: "";
@@ -1069,7 +1078,7 @@ body {
 .point2 > .point__wrapper > .point_cnt > div,
 .point3 > .point__wrapper > .point_cnt > div,
 .point4 > .point__wrapper > .point_cnt > div {
-  text-align: center;
+  text-align: left;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -1322,15 +1331,32 @@ body {
       max-width: 95%;
   }
 
+    
+    .intro > ol > li > a > .intro_point_num > span {
+        margin-left: 5px;
+        letter-spacing: 0px;
+    }
+    
+  .point1 > .point__wrapper > .point_cnt > div,
+  .point2 > .point__wrapper > .point_cnt > div,
+  .point3 > .point__wrapper > .point_cnt > div,
+  .point4 > .point__wrapper > .point_cnt > div {
+      text-align: center;
+  }
+
   .contact > .contact_btn > a {
     font-size: 22px !important;
   }
     .mainimg_202006 {
+    width: 100%;
+    min-width: 980px;
+    height: 460px;
+    margin: 0px auto;
+    background: url("./img.webp") center center / cover no-repeat;
+}
+  .mainimg_202006 {
     justify-content: space-around;
     min-width: 0 !important;
-    height: auto;
-    background: none;
-    background-color: #e5222c;
   }
     .point1.point4 .point4_box1 > header > h3, .point2.point4 .point4_box1 > header > h3, .point3.point4 .point4_box1 > header > h3, .point4.point4 .point4_box1 > header > h3 {
     z-index: 0;
@@ -1715,7 +1741,7 @@ body {
   .point3 > .point__wrapper > .point_cnt > div > div > .point_text,
   .point4 > .point__wrapper > .point_cnt > div > div > .point_text {
     line-height: normal;
-    font-size: 16px;
+    font-size: 18px;
   }
   .point1 > .point__wrapper > .point_cnt > div > div > .point_text > b,
   .point2 > .point__wrapper > .point_cnt > div > div > .point_text > b,
