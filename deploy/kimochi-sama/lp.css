@@ -220,7 +220,7 @@ body {
   width: 100%;
   min-width: 980px;
   margin: 0 auto;
-  background: rgba(83, 143, 83, .7);
+  background: rgba(83, 143, 83, 1);
 }
 #header > .header_inner {
   display: -ms-flexbox;
@@ -231,7 +231,7 @@ body {
   height: 83px;
   align-items: center;
   justify-content: space-between;
-  background: rgba(83, 143, 83, .7);
+  background: rgba(83, 143, 83, 1);
 }
 #header > .header_inner > div > a {
   display: block;
@@ -1299,6 +1299,11 @@ body {
 
 .header_logo {
     max-height: 80px;
+    border: solid 1px black;
+}
+.header_logo:hover {
+    cursor: pointer;
+    opacity: .6;
 }
 
 .point_list {
