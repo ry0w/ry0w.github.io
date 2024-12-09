@@ -1333,11 +1333,11 @@ body {
     color: white;
     display: inline-block;
     font-family: "Noto Sans JP", serif;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
-    padding: 1em;
+    padding: .25em;
     border-radius: 10px;
-    background: rgba(34, 229, 116, .3)
+    background: rgba(247, 162, 182, 0.3);
 }
 
 /* レスポンシブ */
